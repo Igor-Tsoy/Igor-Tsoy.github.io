@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AR testing</title>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
@@ -21,16 +21,14 @@
   </head>
   <body>
     <a-scene embeded arjs>
-      <a-marker preset="hiro">
-        <a-entity
-          position="0 0 0"
-          scale="1 1 1"
-          gps-entity-place="longitude: 56.015303; latitude: 92.812505;"
-          gltf-model="obj/scene.gltf"
-        >
-        </a-entity>
-      </a-marker>
-      <a-entity gps-camera rotation-reader> </a-entity>
+      <a-entity
+        position="0 0 0"
+        scale="1 1 1"
+        gps-entity-place="longitude: 56.015303; latitude: 92.812505;"
+        gltf-model="obj/scene.gltf"
+      >
+      </a-entity>
+      <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
   </body>
 </html>
